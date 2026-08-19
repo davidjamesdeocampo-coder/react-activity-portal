@@ -319,3 +319,13 @@ body {
   text-align: left;
   margin-bottom: 20px;
 }
+
+.alert-warning {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+.alert-empty {
+  background: var(--bg);
+  color: var(--text-muted);
+}
