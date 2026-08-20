@@ -1,6 +1,6 @@
 :root {
-  --bg: #eef1f4;
-  --bg-soft: #f5f7fa;
+  --bg: #edf1f4;
+  --bg-soft: #f7f8fa;
   --panel: rgba(255, 255, 255, 0.7);
   --panel-strong: rgba(255, 255, 255, 0.92);
   --line: rgba(15, 23, 42, 0.1);
@@ -8,8 +8,11 @@
   --text: #111827;
   --text-soft: #1f2937;
   --text-muted: #4b5563;
-  --button: #111827;
+  --button: #1f2937;
   --button-text: #f9fafb;
+  --surface-dark: #2b313a;
+  --surface-mid: #3a4049;
+  --surface-soft: #4b545f;
   --shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
 }
 
@@ -342,8 +345,8 @@ button {
 
 .auth-card {
   width: min(540px, 100%);
-  background: linear-gradient(180deg, rgba(19,20,22,0.96), rgba(11,11,13,0.96));
-  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(45, 50, 58, 0.96), rgba(30, 35, 42, 0.96));
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 28px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -352,7 +355,7 @@ button {
 .auth-header {
   background: rgba(255,255,255,0.02);
   padding: 28px 30px 22px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .auth-header h2 {
@@ -385,21 +388,21 @@ button {
 
 .form-group input {
   width: 100%;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.02);
-  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: #f9fafb;
   border-radius: 14px;
   padding: 14px 15px;
   font-size: 0.97rem;
 }
 
 .form-group input::placeholder {
-  color: var(--text-muted);
+  color: rgba(209, 213, 219, 0.8);
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.18);
   box-shadow: 0 0 0 4px rgba(255,255,255,0.04);
 }
 
@@ -421,14 +424,15 @@ button {
 }
 
 .btn-primary {
-  background: var(--button);
-  color: var(--button-text);
+  background: linear-gradient(180deg, rgba(44, 75, 114, 0.9), rgba(18, 44, 75, 0.95));
+  color: #f9fafb;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line);
-  color: var(--text-soft);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #f9fafb;
 }
 
 .alert {
@@ -442,22 +446,22 @@ button {
 
 .alert-error {
   background: rgba(255,255,255,0.04);
-  color: var(--text);
+  color: #f9fafb;
 }
 
 .alert-success {
   background: rgba(255,255,255,0.06);
-  color: var(--text);
+  color: #f9fafb;
 }
 
 .alert-warning {
   background: rgba(255,255,255,0.03);
-  color: var(--text);
+  color: #f9fafb;
 }
 
 .alert-empty {
   background: rgba(255,255,255,0.02);
-  color: var(--text);
+  color: #f9fafb;
 }
 
 .hint-text {
