@@ -403,6 +403,13 @@ button {
   box-shadow: 0 0 0 4px rgba(255,255,255,0.04);
 }
 
+.button-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
 .btn-primary,
 .btn-secondary {
   width: 100%;
@@ -443,6 +450,16 @@ button {
   color: var(--text);
 }
 
+.alert-warning {
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+}
+
+.alert-empty {
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+}
+
 .hint-text {
   margin: 16px 0 0;
   text-align: center;
@@ -451,9 +468,19 @@ button {
   line-height: 1.7;
 }
 
+.welcome-panel {
+  margin-top: 22px;
+  padding-top: 12px;
+}
+
 .welcome-panel h3 {
   margin: 0 0 8px;
   font-size: 1.5rem;
+  color: var(--text-soft);
+}
+
+.welcome-panel p {
+  margin: 8px 0;
   color: var(--text-soft);
 }
 
