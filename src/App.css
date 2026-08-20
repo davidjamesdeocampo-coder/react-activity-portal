@@ -1,17 +1,16 @@
 :root {
-  --bg: #0a0d12;
-  --bg-soft: #111827;
-  --panel: rgba(255, 255, 255, 0.03);
-  --panel-soft: rgba(255, 255, 255, 0.02);
-  --panel-strong: rgba(255, 255, 255, 0.05);
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.14);
-  --text: #f3f4f6;
-  --text-soft: #e5e7eb;
-  --text-muted: #9ca3af;
-  --button: #f3f4f6;
-  --button-text: #111827;
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --bg: #eef1f4;
+  --bg-soft: #f5f7fa;
+  --panel: rgba(255, 255, 255, 0.7);
+  --panel-strong: rgba(255, 255, 255, 0.92);
+  --line: rgba(15, 23, 42, 0.1);
+  --line-strong: rgba(15, 23, 42, 0.14);
+  --text: #111827;
+  --text-soft: #1f2937;
+  --text-muted: #4b5563;
+  --button: #111827;
+  --button-text: #f9fafb;
+  --shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -26,7 +25,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 35%), var(--bg);
+  background: linear-gradient(180deg, #edf1f5 0%, #f4f6f8 100%);
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
 }
@@ -44,7 +43,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
+  background: transparent;
 }
 
 .navbar,
@@ -58,8 +57,8 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 18px 28px;
-  background: rgba(11, 13, 17, 0.96);
-  border-bottom: 1px solid var(--line);
+  background: rgba(17, 24, 39, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
 }
 
@@ -83,7 +82,7 @@ button {
 }
 
 .navbar-title {
-  color: var(--text);
+  color: #f9fafb;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -99,7 +98,7 @@ button {
 .nav-link {
   background: transparent;
   border: 1px solid transparent;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.7);
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 0.82rem;
@@ -109,15 +108,15 @@ button {
 }
 
 .nav-link:hover {
-  color: var(--text-soft);
-  background: rgba(255,255,255,0.02);
-  border-color: var(--line);
+  color: #f9fafb;
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.08);
 }
 
 .nav-link.active {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-soft);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f9fafb;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .content {
@@ -139,34 +138,26 @@ button {
 .workspace-panel {
   width: min(1120px, 100%);
   border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
   padding: 28px 28px 18px;
   box-shadow: var(--shadow);
 }
 
 .minimal-panel-only {
-  padding: 42px 28px 28px;
+  padding: 38px 28px 28px;
+  background: rgba(255,255,255,0.04);
 }
 
 .hero-layout {
   display: grid;
-  grid-template-columns: 1.7fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 26px;
   align-items: center;
-  padding: 14px 8px 18px;
-}
-
-.single-hero {
-  grid-template-columns: 1fr;
   padding: 8px 0 0;
 }
 
 .hero-copy {
-  padding-right: 16px;
-}
-
-.simplified-copy {
   padding-right: 0;
 }
 
@@ -175,8 +166,8 @@ button {
   align-items: center;
   border-radius: 999px;
   padding: 8px 12px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   color: var(--text-muted);
   font-size: 0.72rem;
   font-weight: 700;
@@ -193,14 +184,6 @@ button {
   font-weight: 800;
 }
 
-.hero-copy p {
-  max-width: 700px;
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
 .cta-row {
   display: flex;
   gap: 14px;
@@ -209,7 +192,8 @@ button {
 }
 
 .primary-action,
-.secondary-action {
+.secondary-action,
+.module-button {
   border-radius: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -220,25 +204,101 @@ button {
   background: var(--button);
   color: var(--button-text);
   padding: 16px 22px;
-  box-shadow: 0 10px 24px rgba(255,255,255,0.08);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 .secondary-action {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.1);
   color: var(--text-soft);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 16px 22px;
 }
 
 .primary-action:hover,
-.secondary-action:hover {
+.secondary-action:hover,
+.module-button:hover {
   transform: translateY(-1px);
   opacity: 0.96;
 }
 
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.module-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 16px 16px 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.module-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.module-tag {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.module-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+  letter-spacing: -0.04em;
+}
+
+.module-card p {
+  margin: 16px 0 18px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.module-button {
+  background: rgba(17, 24, 39, 0.04);
+  color: var(--text-soft);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 12px 14px;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 1000px) {
-  .hero-layout {
-    grid-template-columns: 1fr;
+  .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -258,6 +318,10 @@ button {
 
   .workspace-panel {
     padding: 18px 16px 12px;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
   }
 
   .cta-row {
