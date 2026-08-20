@@ -1,18 +1,22 @@
 :root {
-  --bg: #edf1f4;
-  --bg-soft: #f7f8fa;
+  --bg: #e9edf1;
+  --bg-soft: #f3f5f7;
+  --page: #e8ebee;
   --panel: rgba(255, 255, 255, 0.7);
-  --panel-strong: rgba(255, 255, 255, 0.92);
-  --line: rgba(15, 23, 42, 0.1);
-  --line-strong: rgba(15, 23, 42, 0.14);
-  --text: #111827;
+  --panel-strong: #f4f5f7;
+  --line: rgba(15, 23, 42, 0.12);
+  --line-strong: rgba(15, 23, 42, 0.18);
+  --text: #0f172a;
   --text-soft: #1f2937;
   --text-muted: #4b5563;
-  --button: #1f2937;
+  --button: #0f172a;
   --button-text: #f9fafb;
-  --surface-dark: #2b313a;
-  --surface-mid: #3a4049;
-  --surface-soft: #4b545f;
+  --navy: #0a1220;
+  --navy-soft: #111b2a;
+  --card-gray: #dfe4ea;
+  --card-gray-strong: #d5dbe2;
+  --card-dark: #1e2633;
+  --card-dark-soft: #2d3541;
   --shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
 }
 
@@ -28,7 +32,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, #edf1f5 0%, #f4f6f8 100%);
+  background: var(--page);
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
 }
@@ -60,8 +64,8 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 18px 28px;
-  background: rgba(17, 24, 39, 0.96);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
 }
 
@@ -141,15 +145,15 @@ button {
 .workspace-panel {
   width: min(1120px, 100%);
   border-radius: 22px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 28px 28px 18px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .minimal-panel-only {
   padding: 38px 28px 28px;
-  background: rgba(255,255,255,0.04);
+  background: transparent;
 }
 
 .hero-layout {
@@ -169,9 +173,9 @@ button {
   align-items: center;
   border-radius: 999px;
   padding: 8px 12px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: var(--text-muted);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #465467;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -238,8 +242,8 @@ button {
   padding: 16px 16px 18px;
   border-radius: 18px;
   background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -263,7 +267,7 @@ button {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: rgba(17, 24, 39, 0.06);
+  background: rgba(17, 24, 39, 0.04);
   border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--text);
   font-weight: 800;
@@ -292,7 +296,7 @@ button {
 }
 
 .module-button {
-  background: rgba(17, 24, 39, 0.04);
+  background: rgba(17, 24, 39, 0.05);
   color: var(--text-soft);
   border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 12px 14px;
@@ -345,7 +349,7 @@ button {
 
 .auth-card {
   width: min(540px, 100%);
-  background: linear-gradient(180deg, rgba(45, 50, 58, 0.96), rgba(30, 35, 42, 0.96));
+  background: linear-gradient(180deg, rgba(32, 38, 46, 0.95), rgba(21, 27, 35, 0.96));
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 28px;
   overflow: hidden;
