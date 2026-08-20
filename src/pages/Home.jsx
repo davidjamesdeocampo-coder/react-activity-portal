@@ -12,7 +12,7 @@ export default function Home({ setActivePage }) {
       <section className="workspace-panel minimal-panel-only">
         <div className="hero-layout single-hero">
           <div className="hero-copy simplified-copy">
-            <span className="workspace-pill">Workspace overview</span>
+            <span className="workspace-pill">GROUP 1</span>
             <h1>React Activity Portal</h1>
 
             <div className="cta-row">
